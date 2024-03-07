@@ -2,7 +2,7 @@
 const Contact = () => {
   return (
     <div className="w-[96%] m-auto">
-        <h2 className="text-6xl font-bold my-32">Contact</h2>
+        <h2 className="text-6xl font-bold my-28">Contact</h2>
         <form action="">
             <div>
                 <label htmlFor="FirstName" className="inline-block w-40">First Name</label>
