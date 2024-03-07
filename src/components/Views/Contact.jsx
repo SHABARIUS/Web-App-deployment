@@ -5,22 +5,27 @@ const Contact = () => {
         <h2 className="text-6xl font-bold my-32">Contact</h2>
         <form action="">
             <div>
-                <label htmlFor="FirstName">First Name</label>
+                <label htmlFor="FirstName" className="inline-block w-40">First Name</label>
+                <input type="text" className="ml-3 p-3 border border-black border-solid outline-black mr-5" />
+                <label htmlFor="LastName" className="inline-block w-32">Last Name</label>
                 <input type="text" className="mx-3 p-3 border border-black border-solid outline-black" />
             </div>
             <br />
             <div>
-                <label htmlFor="LastName">Last Name</label>
-                <input type="text" className="mx-3 p-3 border border-black border-solid outline-black" />
-            </div>
-            <br />
-            <div>
-                <label htmlFor="Email">Email</label>
+                <label htmlFor="Gender">
+                    Gender
+                </label>
+                <br />
+                <div className="my-3">
+                    <input type="radio" value="male" name="gender" /> <span className="mr-5">Male</span>
+                    <input type="radio" value="female" name="gender"/> Female
+                </div>
+                <label htmlFor="Email" className="inline-block w-40">Email</label>
                 <input type="email" className="mx-3 p-3 border border-black border-solid outline-black" />
             </div>
             <br />
             <div>
-                <label htmlFor="Number">Mobile</label>
+                <label htmlFor="Number" className="inline-block w-40">Mobile</label>
                 <input type="text" className="mx-3 p-3 border border-black border-solid outline-black" />
             </div>
             <br />
