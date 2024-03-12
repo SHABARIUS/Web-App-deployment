@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 // import { useState } from 'react'
 const Contact = () => {
@@ -6,12 +6,15 @@ const Contact = () => {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [mobile, setMobile] = useState('')
+  useEffect(() => {
+    console.log(lastName)
+  }, [])
   return (
     <div className='w-[96%] m-auto' id='formSubmit'>
       <h2 className='text-6xl font-bold my-28 text-center'>Contact</h2>
       <div className='w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50'>
         <form
-          action='https://formsubmit.co/praveenpugazh14@gmail.com'
+          action='https://formsubmit.co/iampraveen7@gmail.com'
           method='POST'
         >
           <div>
@@ -21,6 +24,7 @@ const Contact = () => {
             </label>
             <input
               type='text'
+              name='firstName'
               required
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
@@ -31,6 +35,7 @@ const Contact = () => {
             </label>
             <input
               type='text'
+              name='lastName'
               value={lastName}
               required
               onChange={(e) => setLastName(e.target.value)}
@@ -44,6 +49,7 @@ const Contact = () => {
             </label>
             <input
               type='email'
+              name='email'
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
@@ -57,6 +63,7 @@ const Contact = () => {
             </label>
             <input
               type='text'
+              name='mobile'
               value={mobile}
               required
               onChange={(e) => setMobile(e.target.value)}
@@ -75,16 +82,14 @@ const Contact = () => {
             >
               <option value='devops'>Devops</option>
               <option value='mern'>MERN</option>
+              <option value='salesforce admin'>Salesforce admin</option>
             </select>
           </div>
           <div className='my-10 m-auto w-40'>
             <button
               className='px-6 py-3 bg-[#E5BE7F] text-xl rounded-lg font-bold'
               type='submit'
-              onSubmit={(e) => {
-                e.preventDefault()
-                console.log(email, firstName, lastName, mobile)
-              }}
+              value='Submit'
             >
               Submit
             </button>
