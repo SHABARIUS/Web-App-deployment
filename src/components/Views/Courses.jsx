@@ -15,10 +15,10 @@ const Courses = () => {
             professionals and gain hands-on experience
           </h4>
           <p>
-            Duration: <span>3 Months</span>
+            <span className='font-bold'> Duration:</span> 3 Months
           </p>
           <p>
-            Mode: <span>Online</span>
+            <span className='font-bold'> Mode:</span> Online
           </p>
         </div>
       </div>
@@ -33,10 +33,10 @@ const Courses = () => {
             advance your career
           </h4>
           <p>
-            Duration: <span>3 Months</span>
+            <span className='font-bold'> Duration:</span> 3 Months
           </p>
           <p>
-            Mode: <span>Online</span>
+            <span className='font-bold'> Mode:</span> Online
           </p>
         </div>
       </div>
@@ -45,3 +45,4 @@ const Courses = () => {
 }
 
 export default Courses
+

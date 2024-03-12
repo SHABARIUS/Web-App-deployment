@@ -3,6 +3,7 @@ import Landing from './components/Views/Landing'
 import Courses from './components/Views/Courses'
 import About from './components/Views/About'
 import Contact from './components/Views/Contact'
+import FootBar from './components/Views/FootBar'
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
         <Courses />
         <About />
         <Contact />
+        <FootBar />
       </div>
     </>
   )

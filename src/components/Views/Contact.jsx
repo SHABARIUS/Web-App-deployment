@@ -1,17 +1,14 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-// import { useState } from 'react'
 const Contact = () => {
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [mobile, setMobile] = useState('')
-  useEffect(() => {
-    console.log(lastName)
-  }, [])
+
   return (
-    <div className='w-[96%] m-auto' id='formSubmit'>
-      <h2 className='text-6xl font-bold my-28 text-center'>Contact</h2>
+    <div className='w-[96%] m-auto mb-20' id='formSubmit'>
+      <h2 className='text-6xl font-bold my-10 text-center'>Contact</h2>
       <div className='w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50'>
         <form
           action='https://formsubmit.co/iampraveen7@gmail.com'
