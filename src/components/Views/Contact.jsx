@@ -1,16 +1,29 @@
+import { useState } from 'react'
+
 // import { useState } from 'react'
 const Contact = () => {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [mobile, setMobile] = useState('')
   return (
-    <div className='w-[96%] m-auto'>
+    <div className='w-[96%] m-auto' id='formSubmit'>
       <h2 className='text-6xl font-bold my-28 text-center'>Contact</h2>
       <div className='w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50'>
-        <form action=''>
+        <form
+          action='https://formsubmit.co/praveenpugazh14@gmail.com'
+          method='POST'
+        >
           <div>
+            <input type='hidden' name='_subject' value='New submission!' />
             <label htmlFor='FirstName' className='inline-block w-20'>
               First Name
             </label>
             <input
               type='text'
+              required
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               className='ml-3 p-3 border border-black border-solid  mr-5 text-gray-950 rounded-md outline-none'
             />
             <label htmlFor='LastName' className='inline-block w-20'>
@@ -18,6 +31,9 @@ const Contact = () => {
             </label>
             <input
               type='text'
+              value={lastName}
+              required
+              onChange={(e) => setLastName(e.target.value)}
               className='mx-3 p-3 border border-black border-solid  text-gray-950 rounded-md outline-none'
             />
           </div>
@@ -28,6 +44,9 @@ const Contact = () => {
             </label>
             <input
               type='email'
+              value={email}
+              required
+              onChange={(e) => setEmail(e.target.value)}
               className='mx-3 p-3 border border-black border-solid  text-gray-950 rounded-md outline-none'
             />
           </div>
@@ -38,12 +57,15 @@ const Contact = () => {
             </label>
             <input
               type='text'
+              value={mobile}
+              required
+              onChange={(e) => setMobile(e.target.value)}
               className='mx-3 p-3 border border-black border-solid  text-gray-950 rounded-md outline-none'
             />
           </div>
           <br />
           <div>
-            <label htmlFor='Number' className='inline-block w-20'>
+            <label htmlFor='Course' className='inline-block w-20'>
               Course
             </label>
             <select
@@ -56,7 +78,14 @@ const Contact = () => {
             </select>
           </div>
           <div className='my-10 m-auto w-40'>
-            <button className='px-6 py-3 bg-[#E5BE7F] text-xl rounded-lg font-bold'>
+            <button
+              className='px-6 py-3 bg-[#E5BE7F] text-xl rounded-lg font-bold'
+              type='submit'
+              onSubmit={(e) => {
+                e.preventDefault()
+                console.log(email, firstName, lastName, mobile)
+              }}
+            >
               Submit
             </button>
           </div>
