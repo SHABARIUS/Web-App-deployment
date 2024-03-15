@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div className='w-[96%] m-auto mb-20' id='formSubmit'>
       <h2 className='text-6xl font-bold my-10 text-center'>Contact</h2>
-      <div className='w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50'>
+      <div className='sm:w-[360px] md:w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50 flex justify-center'>
         <form
           action='https://formsubmit.co/iampraveen7@gmail.com'
           method='POST'
@@ -27,6 +27,9 @@ const Contact = () => {
               onChange={(e) => setFirstName(e.target.value)}
               className='ml-3 p-3 border border-black border-solid  mr-5 text-gray-950 rounded-md outline-none'
             />
+          </div> 
+          <br />
+          <div>
             <label htmlFor='LastName' className='inline-block w-20'>
               Last Name
             </label>
@@ -64,7 +67,7 @@ const Contact = () => {
               value={mobile}
               required
               onChange={(e) => setMobile(e.target.value)}
-              className='mx-3 p-3 border border-black border-solid  text-gray-950 rounded-md outline-none'
+              className='mx-3 p-3 border border-black border-solid text-gray-950 rounded-md outline-none'
             />
           </div>
           <br />
@@ -75,10 +78,11 @@ const Contact = () => {
             <select
               name='course'
               id='course'
-              className='mx-3 p-3 border border-black border-solid  text-gray-950 rounded-md outline-none'
+              className='mx-3 p-3 border border-black border-solid text-gray-950 rounded-md outline-none'
             >
               <option value='devops'>Devops</option>
               <option value='mern'>MERN</option>
+              <option value='data science'>Data Science</option>
               <option value='salesforce admin'>Salesforce admin</option>
             </select>
           </div>

@@ -2,7 +2,7 @@ import devOps from '../../assets/devops.png'
 import mern from '../../assets/node.png'
 const Courses = () => {
   return (
-    <div className='w-[96%] m-auto'>
+    <div className='w-[88%] m-auto'>
       <h2 className='text-6xl font-bold my-32'>Courses</h2>
       <div className='flex items-center my-20'>
         <div className='w-[35%]'>
