@@ -6,11 +6,11 @@ const Landing = () => {
             <img src={landingImage} alt="coding person" width='700px' />
         </div>
         <div className="mr-20 mt-60 ">
-            <h1 className='text-4xl lg:text-6xl xl:text-7xl font-bold mb-5 text-center'> Unlock Your <span className="text-[#E5BE7F]">Full Potential</span></h1>
+            <h1 className='text-4xl lg:text-6xl xl:text-7xl font-bold mb-5 text-center'> Unlock Your <span className="text-[#0C3948]">Full Potential</span></h1>
             <h1 className='text-3xl lg:text-5xl font-bold my-3 text-center md:text-right'>Get The Right Job.</h1>
             <h3 className='text-3xl my-5 text-gray-700 mt-10 text-center md:text-right'>Join us to learn more about it</h3>
             <div className="mt-20 text-center md:text-right">
-                <button className='px-12 py-6 bg-[#E5BE7F] text-3xl rounded-lg font-bold'>Join Now</button>
+                <button className='px-12 py-6 bg-[#E5BE7F] text-3xl rounded-lg font-bold'><a  href="#contactForm">Join Now</a></button>
             </div>
         </div>
     </div>

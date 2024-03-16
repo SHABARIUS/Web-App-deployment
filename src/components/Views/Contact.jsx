@@ -8,15 +8,15 @@ const Contact = () => {
 
   return (
     <div className='w-[96%] m-auto mb-20' id='formSubmit'>
-      <h2 className='text-6xl font-bold my-10 text-center'>Contact</h2>
-      <div className='sm:w-[360px] md:w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50 flex justify-center'>
+      <h2 className='text-6xl font-bold my-10 text-center'>Talk to our experts!</h2>
+      <div className='sm:w-[360px] md:w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50 flex justify-center' id="contactForm">
         <form
           action='https://formsubmit.co/iampraveen7@gmail.com'
           method='POST'
         >
           <div>
             <input type='hidden' name='_subject' value='New submission!' />
-            <label htmlFor='FirstName' className='inline-block w-20'>
+            <label htmlFor='FirstName' className='inline-block w-24'>
               First Name
             </label>
             <input
@@ -30,7 +30,7 @@ const Contact = () => {
           </div> 
           <br />
           <div>
-            <label htmlFor='LastName' className='inline-block w-20'>
+            <label htmlFor='LastName' className='inline-block w-24'>
               Last Name
             </label>
             <input
@@ -44,7 +44,7 @@ const Contact = () => {
           </div>
           <br />
           <div>
-            <label htmlFor='Email' className='inline-block w-20'>
+            <label htmlFor='Email' className='inline-block w-24'>
               Email
             </label>
             <input
@@ -58,7 +58,7 @@ const Contact = () => {
           </div>
           <br />
           <div>
-            <label htmlFor='Number' className='inline-block w-20'>
+            <label htmlFor='Number' className='inline-block w-24'>
               Mobile
             </label>
             <input
@@ -71,8 +71,8 @@ const Contact = () => {
             />
           </div>
           <br />
-          <div>
-            <label htmlFor='Course' className='inline-block w-20'>
+          {/* <div>
+            <label htmlFor='Course' className='inline-block w-24'>
               Course
             </label>
             <select
@@ -85,6 +85,29 @@ const Contact = () => {
               <option value='data science'>Data Science</option>
               <option value='salesforce admin'>Salesforce admin</option>
             </select>
+          </div> */}
+          <div>
+            <label htmlFor="">Qualification</label>
+            <select
+              name='education'
+              id='education'
+              className='mx-3 p-3 border border-black border-solid text-gray-950 rounded-md outline-none'
+            >
+              <option value='diploma'>Diploma</option>
+              <option value='arts'>Arts&Science</option>
+              <option value='engineering'>Engineering</option>
+              <option value='masters'>Masters</option>
+              <option value='others'>Others</option>
+            </select>
+          </div>
+          <div className='m-2'>
+            <label htmlFor="" className='mx-4' name="current">Current</label>
+            <input type="radio" value="student" name="current"/>
+            <label htmlFor="" className='mx-2' name="current">Student</label>
+            <input type="radio" value="working" name="current"/>
+            <label htmlFor="" className='mx-2' name="current">Working Professional</label>
+            <input type="radio" value="others" name="current"/>
+            <label htmlFor="" className='mx-2' name="current">Others</label>
           </div>
           <div className='my-10 m-auto w-40'>
             <button

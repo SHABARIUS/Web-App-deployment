@@ -14,6 +14,7 @@ const Header = () => {
           <li>Home</li>
           <li>About</li>
           <li>Contact</li>
+          <li>Courses</li>
         </ul>
         <div>
           <button className='px-4 py-2 my-2 font-bold rounded bg-[#E5BE7F] cursor-pointer'>
