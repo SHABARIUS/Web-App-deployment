@@ -11,8 +11,9 @@ const Courses = () => {
   const[showModal, setShowModal] = useState(false);
   const [syllabus, setSyllabus] = useState('')
   return (
+    <>
+    {showModal && <Modal syllabus={syllabus} setShowModal={setShowModal}/>}
     <div className='w-[85%] m-auto'>
-      {showModal && <Modal syllabus={syllabus} setShowModal={setShowModal}/>}
       <h2 className='text-6xl font-bold my-32'>Courses</h2>
       <div className='flex justify-around items-center'>
       <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>
@@ -83,6 +84,7 @@ const Courses = () => {
       </div>
       </div>
     </div>
+    </>
   )
 }
 
