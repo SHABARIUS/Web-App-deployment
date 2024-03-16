@@ -18,8 +18,7 @@ const Header = () => {
         </ul>
         <div>
           <button className='px-4 py-2 my-2 font-bold rounded bg-[#E5BE7F] cursor-pointer'>
-            Join Now
-          </button>
+          <a  href="#contactForm">Join Now</a></button>
         </div>
       </div>
     </div>

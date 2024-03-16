@@ -87,7 +87,7 @@ const Contact = () => {
             </select>
           </div> */}
           <div>
-            <label htmlFor="">Qualification</label>
+            <label htmlFor="" className='inline-block w-24'>Qualification</label>
             <select
               name='education'
               id='education'
@@ -100,18 +100,24 @@ const Contact = () => {
               <option value='others'>Others</option>
             </select>
           </div>
-          <div className='m-2'>
-            <label htmlFor="" className='mx-4' name="current">Current</label>
-            <input type="radio" value="student" name="current"/>
-            <label htmlFor="" className='mx-2' name="current">Student</label>
-            <input type="radio" value="working" name="current"/>
-            <label htmlFor="" className='mx-2' name="current">Working Professional</label>
-            <input type="radio" value="others" name="current"/>
-            <label htmlFor="" className='mx-2' name="current">Others</label>
+          <div className='mt-4 flex'>
+            <div>
+              <label htmlFor="" name="current">Current</label>
+            </div>
+            <div className='ml-14'>
+              <input type="radio" value="student" name="current"/>
+              <label htmlFor="" className='mx-2' name="current">Student</label>
+              <br />
+              <input type="radio" value="working" name="current"/>
+              <label htmlFor="" className='mx-2' name="current">Working Professional</label>
+              <br />
+              <input type="radio" value="others" name="current"/>
+              <label htmlFor="" className='mx-2' name="current">Others</label>
+            </div>
           </div>
-          <div className='my-10 m-auto w-40'>
+          <div className='my-10 m-auto w-80'>
             <button
-              className='px-6 py-3 bg-[#E5BE7F] text-xl rounded-lg font-bold'
+              className='px-6 py-3 bg-[#E5BE7F] text-xl rounded-lg font-bold text-black w-full'
               type='submit'
               value='Submit'
             >
