@@ -1,12 +1,18 @@
 import devOps from '../../assets/devops.png'
 import mern from '../../assets/node.png'
 import salesForce from '../../assets/Salesforce.png'
-import salesForceSyllabus from '../../assets/Salesforce-Syllabus.pdf'
-import mernSyllabus from '../../assets/MERN-Syllabus.pdf'
-import devopsSyllabus from '../../assets/DevOps-Syllabus.pdf'
+// import salesForceSyllabus from '../../assets/Salesforce-Syllabus.pdf'
+// import mernSyllabus from '../../assets/MERN-Syllabus.pdf'
+// import devopsSyllabus from '../../assets/DevOps-Syllabus.pdf'
+import Modal from "./Modal"
+import { useState } from 'react'
+
 const Courses = () => {
+  const[showModal, setShowModal] = useState(false);
+  const [syllabus, setSyllabus] = useState('')
   return (
     <div className='w-[88%] m-auto'>
+      {showModal && <Modal syllabus={syllabus} setShowModal={setShowModal}/>}
       <h2 className='text-6xl font-bold my-32'>Courses</h2>
       <div className='flex items-center my-20 p-4 shadow-sm hover:shadow-md cursor-pointer'>
         <div className='w-[35%]'>
@@ -24,9 +30,10 @@ const Courses = () => {
           <p>
             <span className='font-bold'> Mode:</span> Online
           </p>
-          <a href={devopsSyllabus} download="DevOps Syllabus" target='_blank'>
-            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-sm'>Download Syllabus</button>
-          </a>
+            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-sm' onClick={() => {
+              setShowModal(true)
+              setSyllabus('DevOps-Syllabus')
+              }}>Download Syllabus</button>
         </div>
       </div>
       <div className='flex items-center my-20 p-4 shadow-sm hover:shadow-md cursor-pointer'>
@@ -45,9 +52,10 @@ const Courses = () => {
           <p>
             <span className='font-bold'> Mode:</span> Online
           </p>
-          <a href={mernSyllabus} download="MERN Syllabus" target='_blank'>
-            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-sm'>Download Syllabus</button>
-          </a>
+            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-sm' onClick={() => {
+              setSyllabus('MERN-Syllabus')
+              setShowModal(true)
+              }}>Download Syllabus</button>
         </div>
       </div>
       <div className='flex items-center my-20 p-4 shadow-sm hover:shadow-md cursor-pointer'>
@@ -66,9 +74,10 @@ const Courses = () => {
           <p>
             <span className='font-bold'> Mode:</span> Online
           </p>
-          <a href={salesForceSyllabus} download="Salesforce Syllabus" target='_blank'>
-            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-sm'>Download Syllabus</button>
-          </a>
+            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-sm' onClick={() => {
+              setSyllabus('Salesforce-Syllabus')
+              setShowModal(true)
+              }}>Download Syllabus</button>
         </div>
       </div>
     </div>
