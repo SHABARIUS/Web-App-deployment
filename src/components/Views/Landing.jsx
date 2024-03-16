@@ -2,7 +2,7 @@ import landingImage from "../../assets/landing.svg"
 const Landing = () => {
   return (
     <>
-    <div className="h-[900px] w-[88%] m-auto flex flex-col md:flex-row justify-between ">
+    <div className="h-[900px] w-[85%] m-auto flex flex-col md:flex-row justify-between ">
         <div className="flex items-center justify-center sm:w-96 md:w-[700px]">
             <img src={landingImage} alt="coding person" width='700px' />
         </div>

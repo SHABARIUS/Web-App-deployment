@@ -15,7 +15,7 @@ const Modal = ({syllabus, setShowModal}) => {
         }
     }
   return (
-    <div className="absolute w-[88%] h-[1400px] flex justify-center items-center bg-black/65">
+    <div className="absolute w-[85%] h-[1400px] flex justify-center items-center bg-black/65">
         <div className="w-[400px] h-96 p-10 bg-[#E5BE7F] flex flex-col justify-center relative ">
             <h2 className="font-bold text-center my-4">To Continue</h2>
             <p className="absolute top-3 right-2 cursor-pointer" onClick={() => setShowModal(false)}>X</p>
