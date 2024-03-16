@@ -1,5 +1,6 @@
 import devOps from '../../assets/devops.png'
 import mern from '../../assets/node.png'
+import salesForce from '../../assets/Salesforce.png'
 const Courses = () => {
   return (
     <div className='w-[88%] m-auto'>
@@ -30,6 +31,24 @@ const Courses = () => {
           <h2 className='text-4xl font-bold my-10'>MERN Stack</h2>
           <h4 className='text-2xl text-gray-700'>
             We offer comprehensive courses on full stack development to help you
+            advance your career
+          </h4>
+          <p>
+            <span className='font-bold'> Duration:</span> 3 Months
+          </p>
+          <p>
+            <span className='font-bold'> Mode:</span> Online
+          </p>
+        </div>
+      </div>
+      <div className='flex items-center my-20'>
+        <div className='w-[35%]'>
+          <img src={salesForce} alt='course logo' width='350px' />
+        </div>
+        <div>
+          <h2 className='text-4xl font-bold my-10'>Salesforce Admin</h2>
+          <h4 className='text-2xl text-gray-700'>
+            We offer comprehensive courses on Salesforce admin to help you
             advance your career
           </h4>
           <p>
