@@ -1,5 +1,5 @@
 import imgUrl from './logo.png'
-
+import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <div className='bg-[#0C3948]'>
@@ -11,10 +11,14 @@ const Header = () => {
           </h1>
         </div>
         <ul className='flex flex-col md:flex-row text-slate-100 w-80 justify-between items-center font-bold cursor-pointer'>
-          <li>Home</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
           <li>About</li>
           <li>Contact</li>
-          <li>Courses</li>
+          <Link to="/courses">
+            <li>Courses</li>
+          </Link>
         </ul>
         <div>
           <button className='px-4 py-2 my-2 font-bold rounded bg-[#E5BE7F] cursor-pointer'>
