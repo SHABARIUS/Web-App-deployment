@@ -3,7 +3,8 @@ import mern from '../../assets/node.png'
 import salesForce from '../../assets/Salesforce.png'
 import Modal from "./Modal"
 import { useState } from 'react'
-import { createPortal } from 'react-dom';
+import { createPortal } from 'react-dom'
+import { Link } from 'react-router-dom'
 
 const Courses = () => {
   const [showModal, setShowModal] = useState(false)
@@ -12,8 +13,8 @@ const Courses = () => {
     <>
     {showModal && createPortal(<Modal syllabus={syllabus} setShowModal={setShowModal}/>, document.getElementById('modal'))}
     <div className='w-[85%] m-auto'>
-      <h2 className='text-6xl font-bold my-32 text-center md:text-left'>Courses</h2>
-      <div className='flex flex-col md:flex-row justify-around items-center flex: 1 1 auto basis-auto flex-wrap'>
+      <h2 className='text-6xl font-bold my-20 text-center md:text-left'>Courses</h2>
+      <div className='flex flex-col md:flex-row justify-between items-center flex: 1 1 auto basis-auto flex-wrap'>
       <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>
         <div className='w-[95%]'>
           <img src={devOps} alt='course logo' width='350px' />
@@ -34,7 +35,9 @@ const Courses = () => {
               setShowModal(true)
               setSyllabus('DevOps-Syllabus')
               }}>Download Syllabus</button>
+            <Link to="/courses/devops">
             <button className='ml-16 border border-black/20 px-4 py-4 rounded-md'>Know more</button>
+            </Link>
         </div>
       </div>
       <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>
@@ -57,7 +60,9 @@ const Courses = () => {
               setSyllabus('MERN-Syllabus')
               setShowModal(true)
               }}>Download Syllabus</button>
+           <Link to="/courses/fullstack">
             <button className='ml-16 border border-black/20 px-4 py-4 rounded-md'>Know more</button>
+            </Link>
         </div>
       </div>
       <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>
@@ -80,7 +85,9 @@ const Courses = () => {
               setSyllabus('Salesforce-Syllabus')
               setShowModal(true)
               }}>Download Syllabus</button>
+           <Link to="/courses/salesforce">
             <button className='ml-16 border border-black/20 px-4 py-4 rounded-md'>Know more</button>
+            </Link>
         </div>
       </div>
       </div>

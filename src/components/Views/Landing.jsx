@@ -11,7 +11,7 @@ const Landing = () => {
             <h1 className='text-3xl lg:text-5xl font-bold my-3 text-center md:text-right'>Get The Right Job<span className="text-[#E5BE7F]">.</span></h1>
             <h3 className='text-3xl my-5 text-gray-700 mt-10 text-center md:text-right'>Join us to learn more about it</h3>
             <div className="mt-20 text-center md:text-right">
-                <button className='px-12 py-6 bg-[#E5BE7F] text-xl md:text-3xl rounded-lg font-bold'><a  href="#contactForm">Join Now</a></button>
+                <button className='px-12 py-6 bg-[#E5BE7F] text-xl md:text-3xl rounded-lg font-bold'><a  href="#contactForm">Know More</a></button>
             </div>
         </div>
       </div>

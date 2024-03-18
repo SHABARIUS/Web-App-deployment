@@ -1,7 +1,12 @@
-
+import FootBar from '../Views/FootBar'
+import Header from '../Views/Header'
 const SalesForce = () => {
   return (
-    <div>SalesForce</div>
+    <div>
+      <Header />
+      SalesForce Course Details here
+      <FootBar />
+    </div>
   )
 }
 

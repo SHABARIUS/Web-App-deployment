@@ -1,7 +1,13 @@
+import FootBar from '../Views/FootBar'
+import Header from '../Views/Header'
 
 const DevOps = () => {
   return (
-    <div>DevOps</div>
+    <div>
+      <Header />
+      DevOps Course Details here
+      <FootBar />
+    </div>
   )
 }
 
