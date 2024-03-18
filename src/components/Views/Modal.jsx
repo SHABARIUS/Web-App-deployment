@@ -70,7 +70,7 @@ const Modal = ({syllabus, setShowModal}) => {
             <p className="my-2">Enter your mobile</p>
             <input type="text" required className='p-3 border border-black border-solid  mr-5 text-gray-950 rounded-md outline-none' value={mobile} onChange={(e) => setMobile(e.target.value)}/>
             <a href={downloadDecider()} download={`${syllabus}`} target='_blank'>
-                <button className="block w-[50%] my-5 mx-auto px-8 py-4  text-slate-100 bg-[#0C3948]" 
+                <button className="block w-[50%] my-5 mx-auto px-8 py-4  text-slate-100 bg-[#0C3948] rounded-md" 
                     onClick={() => {
                     setShowModal(false)
                     if(name.length>0 && mobile.length ==10){
