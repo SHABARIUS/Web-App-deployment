@@ -3,13 +3,14 @@ import mern from '../../assets/node.png'
 import salesForce from '../../assets/Salesforce.png'
 import Modal from "./Modal"
 import { useState } from 'react'
+import { createPortal } from 'react-dom';
 
 const Courses = () => {
   const [showModal, setShowModal] = useState(false)
   const [syllabus, setSyllabus] = useState('')
   return (
     <>
-    {showModal && <Modal syllabus={syllabus} setShowModal={setShowModal}/>}
+    {showModal && createPortal(<Modal syllabus={syllabus} setShowModal={setShowModal}/>, document.getElementById('modal'))}
     <div className='w-[85%] m-auto'>
       <h2 className='text-6xl font-bold my-32 text-center md:text-left'>Courses</h2>
       <div className='flex flex-col md:flex-row justify-around items-center flex: 1 1 auto basis-auto flex-wrap'>

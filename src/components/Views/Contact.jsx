@@ -10,8 +10,8 @@ const Contact = () => {
 
   const notify = (status) => {
     status === 'pass' ? toast.success("Form Submitted Successfully!!!") : toast.error("Unable to submit form!");
-
   }
+  
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
