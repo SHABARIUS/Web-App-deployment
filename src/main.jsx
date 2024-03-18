@@ -7,6 +7,8 @@ import CoursesPage from './components/Pages/CoursesPage';
 import DevOps from "./components/Pages/DevOps"
 import Fullstack from './components/Pages/Fullstack';
 import SalesForce from './components/Pages/SalesForce';
+import AboutPage from './components/Pages/AboutPage';
+import ContactPage from './components/Pages/ContactPage';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
   {
     path:'courses/salesforce',
     element:<SalesForce/>
+  },
+  {
+    path:'about',
+    element:<AboutPage />
+  },
+  {
+    path:'contact',
+    element:<ContactPage />
   }
 ]);
 
