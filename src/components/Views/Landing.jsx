@@ -1,3 +1,4 @@
+// import landingImage from '../../assets/landing.svg'
 import landingImage from '../../assets/landing.svg'
 const Landing = () => {
   return (
