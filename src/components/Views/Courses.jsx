@@ -31,7 +31,7 @@ const Courses = () => {
           <p>
             <span className='font-bold'> Mode:</span> Online
           </p>
-            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-md' onClick={() => {
+            <button className='my-4 px-2 py-4 bg-[#E5BE7F] hover:bg-[#d3ac6e] rounded-md' onClick={() => {
               setShowModal(true)
               setSyllabus('DevOps-Syllabus')
               }}>Download Syllabus</button>
@@ -56,7 +56,7 @@ const Courses = () => {
           <p>
             <span className='font-bold'> Mode:</span> Online
           </p>
-            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-md' onClick={() => {
+            <button className='my-4 px-2 py-4 bg-[#E5BE7F] hover:bg-[#d3ac6e] rounded-md' onClick={() => {
               setSyllabus('MERN-Syllabus')
               setShowModal(true)
               }}>Download Syllabus</button>
@@ -81,7 +81,7 @@ const Courses = () => {
           <p>
             <span className='font-bold'> Mode:</span> Online
           </p>
-            <button className='my-4 px-2 py-4 bg-[#E5BE7F] rounded-md' onClick={() => {
+            <button className='my-4 px-2 py-4 bg-[#E5BE7F] hover:bg-[#d3ac6e] rounded-md' onClick={() => {
               setSyllabus('Salesforce-Syllabus')
               setShowModal(true)
               }}>Download Syllabus</button>

@@ -25,7 +25,7 @@ const Header = () => {
           </Link>
         </ul>
         <div>
-          <button className='px-4 py-2 my-2 font-bold rounded bg-[#E5BE7F] cursor-pointer'>
+          <button className='px-4 py-2 my-2 font-bold rounded bg-[#E5BE7F] hover:bg-[#d3ac6e] cursor-pointer'>
           <a  href="#contactForm">Join Now</a></button>
         </div>
       </div>

@@ -33,7 +33,7 @@ const Modal = ({syllabus, setShowModal}) => {
     const onSubmit = async (name,mobile) => {
         const formData = new FormData();
         console.log(formData)
-        formData.append("access_key", "9a76b46e-fd29-4d6a-9703-8b4c7df8a4d9");
+        formData.append("access_key", "96bd1249-acaf-4e98-b98c-aa8920adc238");
         formData.append("name", name)
         formData.append("mobile", mobile)
         const object = Object.fromEntries(formData);

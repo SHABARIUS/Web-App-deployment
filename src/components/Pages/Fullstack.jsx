@@ -1,8 +1,16 @@
 import FootBar from '../Views/FootBar'
 import Header from '../Views/Header'
 import fullstackImage from "../../assets/fullstack.jpg"
+import { useState } from 'react'
+import { createPortal } from 'react-dom'
+import Modal from '../Views/Modal'
+
 const Fullstack = () => {
+  const [showModal, setShowModal] = useState(false)
+  const [syllabus, setSyllabus] = useState('')
   return (
+    <>
+    {showModal && createPortal(<Modal syllabus={syllabus} setShowModal={setShowModal}/>, document.getElementById('modal'))}
     <div>
       <Header />
       <div className='w-[50%] m-auto my-16'>
@@ -19,8 +27,11 @@ const Fullstack = () => {
               <li className='text-gray-700'>Reserve a Seat for INR 5,000/-</li>
             </ul>
             <div>
-              <button className='px-6 py-4 my-2 font-bold rounded-md bg-[#E5BE7F] cursor-pointer mr-5'>Apply Now</button>
-              <button className='ml-5 border border-black/20 px-3 py-4 rounded-md'>Download Syllabus</button>
+              <button className='px-6 py-4 my-2 font-bold rounded-md bg-[#E5BE7F] hover:bg-[#d3ac6e] cursor-pointer mr-5'>Apply Now</button>
+              <button className='ml-5 border border-black/20 px-3 py-4 rounded-md' onClick={() => {
+              setSyllabus('MERN-Syllabus')
+              setShowModal(true)
+              }}>Download Syllabus</button>
             </div>
           </div>
           <div>
@@ -78,6 +89,7 @@ const Fullstack = () => {
       </div>
       <FootBar />
     </div>
+    </>
   )
 }
 
