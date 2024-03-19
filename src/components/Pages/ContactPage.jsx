@@ -7,7 +7,9 @@ const ContactPage = () => {
     <>
     <div className='h-[91.25vh]'>
         <Header />
+        <div className='mb-20'>
         <Contact />
+        </div>
     </div>
         <FootBar />
     </>
