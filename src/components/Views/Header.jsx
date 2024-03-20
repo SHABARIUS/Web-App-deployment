@@ -1,5 +1,6 @@
 import imgUrl from './logo.png'
 import { Link } from 'react-router-dom'
+
 const Header = () => {
   return (
     <div className='bg-[#0C3948]'>
@@ -11,22 +12,23 @@ const Header = () => {
           </h1>
         </div>
         <ul className='flex flex-col md:flex-row text-slate-100 w-80 justify-between items-center font-bold cursor-pointer'>
-          <Link to="/">
+          <Link to='/'>
             <li>Home</li>
           </Link>
-          <Link to="/about">
-          <li>About</li>
+          <Link to='/about'>
+            <li>About</li>
           </Link>
-          <Link to="/contact">
-          <li>Contact</li>
+          <Link to='/contact'>
+            <li>Contact</li>
           </Link>
-          <Link to="/courses">
+          <Link to='/courses'>
             <li>Courses</li>
           </Link>
         </ul>
         <div>
           <button className='px-4 py-2 my-2 font-bold rounded bg-[#E5BE7F] hover:bg-[#d3ac6e] cursor-pointer'>
-          <a  href="#contactForm">Join Now</a></button>
+            <a href='#contactForm'>Join Now</a>
+          </button>
         </div>
       </div>
     </div>
