@@ -9,8 +9,7 @@ const Landing = () => {
         </div>
         <div className='md:mr-20 mt-5 md:mt-60 '>
           <h1 className='text-3xl lg:text-6xl xl:text-7xl font-bold mb-5 text-center'>
-            Upskill and Transform Your{' '}
-            <span className='text-[#E5BE7F]'>Career!</span>
+            Transform Your <span className='text-[#E5BE7F]'>Career!</span>
           </h1>
           <h1 className='text-3xl lg:text-5xl font-bold my-3 text-center md:text-right'>
             Get The Right Job<span className='text-[#E5BE7F]'>.</span>
