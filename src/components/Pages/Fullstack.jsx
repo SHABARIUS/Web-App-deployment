@@ -18,9 +18,9 @@ const Fullstack = () => {
         )}
       <div>
         <Header />
-        <div className='w-[45%] m-auto my-16'>
+        <div className='w-[90%] md:w-[45%] m-auto my-16'>
           {/* first segment */}
-          <div className='flex justify-between mb-20'>
+          <div className='flex justify-between flex-wrap sm:items-center md:items-center mb-20 '>
             <div className='flex-3'>
               <h2 className='text-xl'>FULL-STACK DEVELOPMENT BOOTCAMP</h2>
               <h2 className='text-xl'>The most trusted way to become an</h2>
@@ -41,12 +41,12 @@ const Fullstack = () => {
                   Reserve a Seat for INR 5,000/-
                 </li>
               </ul>
-              <div>
-                <button className='px-6 py-4 my-2 font-bold rounded-md bg-[#E5BE7F] hover:bg-[#d3ac6e] cursor-pointer mr-5'>
+              <div className='flex flex-col md:flex-row mb-10'>
+                <button className='px-6 py-4 my-2 mr-5 font-bold rounded-md bg-[#E5BE7F] hover:bg-[#d3ac6e] cursor-pointer'>
                   Apply Now
                 </button>
                 <button
-                  className='ml-5 border border-black/20 px-3 py-4 rounded-md'
+                  className='px-6 py-4 my-2 mr-5 font-bold rounded-md border border-black/20 hover:border-black/70 cursor-pointer'
                   onClick={() => {
                     setSyllabus('MERN-Syllabus')
                     setShowModal(true)
@@ -67,7 +67,7 @@ const Fullstack = () => {
           </div>
         </div>
         {/* second segment */}
-        <div className='w-[45%] h-40 m-auto mb-20 border-[2px] border-black/45 rounded-xl flex justify-around items-center'>
+        <div className='w-[90%] md:w-[45%] h-40 m-auto mb-20 border-[2px] border-black/45 rounded-xl flex justify-around flex-wrap sm:items-center md:items-center'>
           <div className='text-center'>
             <h1 className='text-2xl font-bold'>₹12LPA</h1>
             <h3 className='text-xl font-bold'>Average Salary</h3>
@@ -89,12 +89,12 @@ const Fullstack = () => {
           </div>
         </div>
         {/* thrid segment */}
-        <div className='w-[45%] m-auto mb-20'>
+        <div className='w-[90%] md:w-[45%] m-auto mb-20'>
           <p>FULL-STACK DEVELOPMENT BOOTCAMP CURRICULUM</p>
           <h2 className='text-3xl font-semibold'>
             Learn with a World-Class Curriculum
           </h2>
-          <div className='mt-10 flex justify-between'>
+          <div className='mt-10 flex justify-between flex-wrap sm:items-center space-x-1 space-y-2'>
             <div
               className='px-8 py-5 border border-black/45 rounded-xl cursor-pointer hover:border-black/95'
               onClick={() => setShowContent({ showing: 'frontend' })}
@@ -129,7 +129,7 @@ const Fullstack = () => {
         </div>
         {/* third segment optional portion */}
         {showContent.showing == 'frontend' && (
-          <div className='w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 h-[460px]'>
+          <div className='w-[90%] md:w-[50%] lg:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 lg:h-[560px]'>
             <h1 className='text-2xl font-bold mb-5'>Frontend Development</h1>
             <p>
               The frontend represents the user-facing application, which aims to
@@ -154,7 +154,7 @@ const Fullstack = () => {
           </div>
         )}
         {showContent.showing == 'backend' && (
-          <div className='w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 h-[460px]'>
+          <div className='w-[90%] md:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[460px]'>
             <h1 className='text-2xl font-bold mb-5'>Backend Development</h1>
             <p>
               Discover Node.js, the incredibly popular JavaScript runtime that
@@ -175,7 +175,7 @@ const Fullstack = () => {
           </div>
         )}
         {showContent.showing == 'Testing & Deployment' && (
-          <div className='w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 h-[460px]'>
+          <div className='w-[90%] md:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[460px]'>
             <h1 className='text-2xl font-bold mb-5'>Testing & Deployment</h1>
             <p>
               Learn about software testing which enables you to write code that
@@ -195,7 +195,7 @@ const Fullstack = () => {
           </div>
         )}
         {showContent.showing == 'projects' && (
-          <div className='w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 h-[460px]'>
+          <div className='w-[90%] md:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[460px]'>
             <h1 className='text-2xl font-bold mb-5'>Projects</h1>
             <p>
               Gear up to build a robust portfolio of cloud-deployed
@@ -223,7 +223,7 @@ const Fullstack = () => {
             </ul>
           </div>
         )}
-        <div className='w-[45%] m-auto mb-20'>
+        <div className='w-[90%] md:w-[45%] m-auto mb-20'>
           <h1 className='text-2xl font-bold'>
             Tools and Technologies You’ll Master
           </h1>
