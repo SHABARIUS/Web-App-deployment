@@ -8,7 +8,7 @@ const AboutPage = () => {
       <div className=''>
         <Header />
         <About />
-        <div className='w-[85%] m-auto mb-10'>
+        <div className='w-[65%] m-auto mb-10'>
           <h1 className='text-3xl font-bold mb-10'>Our CEO</h1>
           <div className='w-[70%] flex justify-between'>
             <div className='w-[60%]'>

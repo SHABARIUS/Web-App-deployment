@@ -4,7 +4,7 @@ const Landing = () => {
   return (
     <>
       <div className='w-[65%] m-auto flex flex-col md:flex-row justify-between my-20 md:my-40'>
-        <div className='flex items-center justify-center sm:w-[250px] md:w-[500px] lg:w-[600px] shrink-0 basis-1/2'>
+        <div className='flex items-center justify-center sm:w-[250px] md:w-[500px] lg:w-[600px] shrink-0 '>
           <img src={landingImage} alt='coding person' width='500px' />
         </div>
         <div className='md:mr-20 mt-5 shrink flex-wrap '>
