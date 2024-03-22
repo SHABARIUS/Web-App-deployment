@@ -12,7 +12,7 @@ const Courses = () => {
   return (
     <>
     {showModal && createPortal(<Modal syllabus={syllabus} setShowModal={setShowModal}/>, document.getElementById('modal'))}
-    <div className='w-[85%] m-auto'>
+    <div className='w-[90%] md:w-[65%] m-auto'>
       <h2 className='text-6xl font-bold my-20 text-center md:text-left'>Our Courses</h2>
       <div className='flex flex-col md:flex-row justify-between items-center flex: 1 1 auto basis-auto flex-wrap'>
       <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>

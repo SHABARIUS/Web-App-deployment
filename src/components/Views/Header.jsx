@@ -14,7 +14,7 @@ const Header = () => {
           document.getElementById('modal')
         )}
       <div className='bg-[#0C3948]'>
-        <div className='w-full md:w-[90%] flex flex-col md:flex-row justify-between items-center m-auto py-3'>
+        <div className='w-full md:w-[80%] flex flex-col md:flex-row flex-wrap justify-between items-center m-auto py-3'>
           <div className='logo w-96 flex flex-row items-center'>
             <img src={imgUrl} alt='logo' width='128px' />
             <h1 className='text-slate-100 font-bold'>
