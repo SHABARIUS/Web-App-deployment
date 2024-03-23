@@ -4,6 +4,7 @@ import Header from "../Views/Header";
 import { createPortal } from "react-dom";
 import Modal from "../Views/Modal";
 import devops from "../../assets/devops.jpg";
+import D3Support from "../Views/Common/D3Support";
 
 const DevOps = () => {
   const [showModal, setShowModal] = useState(false);
@@ -318,6 +319,7 @@ const DevOps = () => {
             Tools and Technologies You’ll Master
           </h1>
         </div>
+        <D3Support />
         <FootBar />
       </div>
     </>

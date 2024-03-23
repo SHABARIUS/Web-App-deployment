@@ -8,7 +8,7 @@ const CoursesPage = () => {
     <div>
       <Header />
       <Courses />
-      <div className='w-[85%] m-auto my-20'>
+      <div className='w-[65%] m-auto my-20'>
         <h1 className='text-5xl font-bold'>Upcoming courses</h1>
         <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>
         <div className='w-[95%]'>

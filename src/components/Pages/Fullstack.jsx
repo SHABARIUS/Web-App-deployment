@@ -4,6 +4,7 @@ import fullstackImage from "../../assets/fullstack.jpg"
 import { useState } from "react"
 import { createPortal } from "react-dom"
 import Modal from "../Views/Modal"
+import D3Support from "../Views/Common/D3Support"
 
 const Fullstack = () => {
   const [showModal, setShowModal] = useState(false)
@@ -233,6 +234,7 @@ const Fullstack = () => {
             Tools and Technologies You’ll Master
           </h1>
         </div>
+        <D3Support />
         <FootBar />
       </div>
     </>
