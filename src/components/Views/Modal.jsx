@@ -1,65 +1,76 @@
-import salesForceSyllabus from '../../assets/Salesforce-Syllabus.pdf'
-import mernSyllabus from '../../assets/MERN-Syllabus.pdf'
-import devopsSyllabus from '../../assets/DevOps-Syllabus.pdf'
-import { useEffect, useState } from 'react'
-import 'react-toastify/dist/ReactToastify.css'
-import { ToastContainer, toast } from 'react-toastify'
+import salesForceSyllabus from "../../assets/Salesforce-Syllabus.pdf"
+import mernSyllabus from "../../assets/MERN-Syllabus.pdf"
+import devopsSyllabus from "../../assets/DevOps-Syllabus.pdf"
+import { useEffect, useState } from "react"
+import "react-toastify/dist/ReactToastify.css"
+import { ToastContainer, toast } from "react-toastify"
 
 // eslint-disable-next-line react/prop-types
 const Modal = ({ syllabus, setShowModal }) => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = "hidden"
 
     return () => {
-      document.body.style.overflow = 'scroll'
-      document.body.style.overflowX = 'hidden'
+      document.body.style.overflow = "scroll"
+      document.body.style.overflowX = "hidden"
     }
   }, [])
 
   const downloadDecider = () => {
-    if (syllabus === 'Devops-Syllabus') {
+    if (syllabus === "Devops-Syllabus") {
       return devopsSyllabus
-    } else if (syllabus === 'MERN-Syllabus') {
+    } else if (syllabus === "MERN-Syllabus") {
       return mernSyllabus
     } else {
       return salesForceSyllabus
     }
   }
   const notify = (status) => {
-    status === 'pass'
-      ? toast.success('Form Submitted Successfully!!!')
-      : toast.error('Unable to submit form!')
+    status === "pass"
+      ? toast.success("Form Submitted Successfully!!!")
+      : toast.error("Unable to submit form!")
   }
 
   const onSubmit = async (name, mobile) => {
     const formData = new FormData()
     console.log(formData)
-    formData.append('access_key', '96bd1249-acaf-4e98-b98c-aa8920adc238')
-    formData.append('name', name)
-    formData.append('mobile', mobile)
+    formData.append("access_key", "96bd1249-acaf-4e98-b98c-aa8920adc238")
+    formData.append("name", name)
+    formData.append("mobile", mobile)
     const object = Object.fromEntries(formData)
     const json = JSON.stringify(object)
 
     console.log(json)
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      },
-      body: json
-    }).then((res) => res.json())
+    const textValidation = (text) => {
+      const NAME_REGEX = /^([a-zA-Z]+[ \-']{0,1}){1,3}$/
+      if (text.match(NAME_REGEX)) {
+        console.log("here")
+        return true
+      }
+      return false
+    }
+    const res =
+      textValidation(name) &&
+      (await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      }).then((res) => res.json()))
 
-    if (res.success) {
-      console.log('Success', res)
-      notify('pass')
+    if (res && res.success) {
+      console.log("Success", res)
+      notify("pass")
     } else {
-      notify('fail')
+      notify("fail")
     }
   }
 
-  const [name, setName] = useState('')
-  const [mobile, setMobile] = useState('')
+  const [name, setName] = useState("")
+  const [mobile, setMobile] = useState("")
+
   return (
     <div className='fixed w-[100%] h-[100%] z-50 flex justify-center items-center bg-black/65 top-0 right-0 left-0 bottom-0'>
       <div className='w-[400px] h-96 p-10 bg-[#E5BE7F] flex flex-col justify-center relative '>
@@ -81,7 +92,7 @@ const Modal = ({ syllabus, setShowModal }) => {
         <br />
         <p className='my-2'>Enter your mobile</p>
         <input
-          type='text'
+          type='number'
           required
           className='p-3 border border-black border-solid  mr-5 text-gray-950 rounded-md outline-none'
           value={mobile}
@@ -111,4 +122,3 @@ const Modal = ({ syllabus, setShowModal }) => {
 }
 
 export default Modal
-
