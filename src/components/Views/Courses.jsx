@@ -19,7 +19,7 @@ const Courses = () => {
         <div className='w-[95%]'>
           <img src={devOps} alt='course logo' width='350px' />
         </div>
-        <div>
+        <div className='h-84'>
           <h2 className='text-3xl font-bold my-10'>Devops</h2>
           <h4 className='text-gray-700'>
             Learn the latest technologies and best practices from industry
@@ -36,15 +36,15 @@ const Courses = () => {
               setSyllabus('DevOps-Syllabus')
               }}>Download Syllabus</button>
             <Link to="/courses/devops">
-            <button className='ml-16 border border-black/20 px-4 py-4 rounded-md'>Know more</button>
+            <button className='ml-16 border border-black/25 px-4 py-4 rounded-md hover:border-black/75 '>Know more</button>
             </Link>
         </div>
       </div>
       <div className='w-96 flex flex-col items-center my-20 p-4 rounded-md shadow-sm hover:shadow-md cursor-pointer'>
         <div className='w-[95%]'>
-          <img src={mern} alt='course logo' width='350px' />
+          <img src={mern} alt='course logo' width='280px' />
         </div>
-        <div>
+        <div className='h-84'>
           <h2 className='text-3xl font-bold my-10'>FullStack Development (MERN) </h2>
           <h4 className='text-gray-700'>
             We offer comprehensive courses on full stack development to help you
@@ -61,7 +61,7 @@ const Courses = () => {
               setShowModal(true)
               }}>Download Syllabus</button>
            <Link to="/courses/fullstack">
-            <button className='ml-16 border border-black/20 px-4 py-4 rounded-md'>Know more</button>
+            <button className='ml-16 border border-black/25 px-4 py-4 rounded-md  hover:border-black/75'>Know more</button>
             </Link>
         </div>
       </div>
@@ -69,7 +69,7 @@ const Courses = () => {
         <div className='w-[95%]'>
           <img src={salesForce} alt='course logo' width='280px' />
         </div>
-        <div>
+        <div className='h-84'>
           <h2 className='text-3xl font-bold my-10'>Salesforce Admin</h2>
           <h4 className='text-gray-700'>
             We offer comprehensive courses on Salesforce admin to help you
@@ -86,7 +86,7 @@ const Courses = () => {
               setShowModal(true)
               }}>Download Syllabus</button>
            <Link to="/courses/salesforce">
-            <button className='ml-16 border border-black/20 px-4 py-4 rounded-md'>Know more</button>
+            <button className='ml-16 border border-black/25 px-4 py-4 rounded-md hover:border-black/75'>Know more</button>
             </Link>
         </div>
       </div>
