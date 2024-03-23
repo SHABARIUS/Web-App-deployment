@@ -82,49 +82,49 @@ const SalesForce = () => {
               onClick={() => setShowContent({ showing: "devops" })}
             >
               <p>Module 1</p>
-              <h1 className="text-[#0C3948] font-bold">DevOps Introduction</h1>
+              <h1 className="text-[#0C3948] font-bold">Intro Salesforce</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
               onClick={() => setShowContent({ showing: "os" })}
             >
               <p>Module 2</p>
-              <h1 className="text-[#0C3948] font-bold">OS(Linux/Mac)</h1>
+              <h1 className="text-[#0C3948] font-bold">Company Information</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
               onClick={() => setShowContent({ showing: "fileServer" })}
             >
               <p>Module 3</p>
-              <h1 className="text-[#0C3948] font-bold">File servers</h1>
+              <h1 className="text-[#0C3948] font-bold">Salesforce Data Model</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
               onClick={() => setShowContent({ showing: "bash" })}
             >
               <p>Module 4</p>
-              <h1 className="text-[#0C3948] font-bold">Bash Scripting</h1>
+              <h1 className="text-[#0C3948] font-bold">User Management</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
               onClick={() => setShowContent({ showing: "git" })}
             >
               <p>Module 5</p>
-              <h1 className="text-[#0C3948] font-bold">Git</h1>
+              <h1 className="text-[#0C3948] font-bold">User Interface</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
               onClick={() => setShowContent({ showing: "containerization" })}
             >
               <p>Module 6</p>
-              <h1 className="text-[#0C3948] font-bold">Containerization</h1>
+              <h1 className="text-[#0C3948] font-bold">Reports & Dashboards</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
               onClick={() => setShowContent({ showing: "docker" })}
             >
               <p>Module 7</p>
-              <h1 className="text-[#0C3948] font-bold">Dockers</h1>
+              <h1 className="text-[#0C3948] font-bold">Deployment</h1>
             </div>
             <div
               className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
@@ -132,37 +132,49 @@ const SalesForce = () => {
             >
               <p>Module 8</p>
               <h1 className="text-[#0C3948] font-bold">
-                AWS Infrastructure -1
+              Data Management
+              </h1>
+            </div>
+            <div
+              className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
+              onClick={() => setShowContent({ showing: "aws" })}
+            >
+              <p>Module 9</p>
+              <h1 className="text-[#0C3948] font-bold">
+              Data Security
+              </h1>
+            </div>
+            <div
+              className="px-8 py-5  border border-black/45 rounded-xl cursor-pointer hover:border-black/95 w-60"
+              onClick={() => setShowContent({ showing: "aws" })}
+            >
+              <p>Module 10</p>
+              <h1 className="text-[#0C3948] font-bold">
+              Flow Builders
               </h1>
             </div>
           </div>
         </div>
         {/* third segment optional portion */}
-        {showContent.showing == "devops" && (
-          <div className="w-[90%] md:w-[55%] lg:w-[50%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[620px]">
-            <h1 className="text-2xl font-bold mb-5">DevOps Introduction</h1>
+        {showContent.showing == "sales" && (
+          <div className="w-[90%] md:w-[65%] lg:w-[55%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[620px]">
+            <h1 className="text-2xl font-bold mb-5">Intro Salesforce</h1>
             <p>
-              DevOps is a cultural and technical movement that emphasizes
+              Salesforce is a cultural and technical movement that emphasizes
               collaboration, automation, and integration between software
-              development and IT operations teams to deliver high-quality
-              software products rapidly and reliably.
+              development and IT operations teams. 
+              {/* need to update */}
             </p>
             <p className="font-bold mt-5">Topics Covered</p>
             <ul className="mb-5 list-disc list-inside">
-              <li>Source and Version Control using Git and GitHub</li>
-              <li>Mastering HTML5 and CSS3</li>
-              <li>Mastering JavaScript (ECMAScript 2020+)</li>
-              <li>Working with Remote Data and Writing Modular Code</li>
-              <li>Modern JavaScript using Babel</li>
-              <li>Working with Parcel and Webpack module bundlers</li>
-              <li>Building Single Page Applications using React</li>
-              <li>Work with the incredible Hooks API</li>
+              <li>What is Salesforce?</li>
+              <li>Salesforce Org & Trailhead account creation</li>
             </ul>
           </div>
         )}
-        {showContent.showing == "os" && (
+        {showContent.showing == "company" && (
           <div className="w-[90%] md:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[620px]">
-            <h1 className="text-2xl font-bold mb-5">OS(Linux/Mac)</h1>
+            <h1 className="text-2xl font-bold mb-5">Company Information</h1>
             <p>
               Linux, macOS, and Windows are three major operating systems used
               across various devices, offering distinct features and user
@@ -170,24 +182,16 @@ const SalesForce = () => {
             </p>
             <p className="font-bold mt-5">Topics Covered</p>
             <ul className="mb-5 list-disc list-inside">
-              <li>What is SDLC?</li>
-              <li>Types Of SDLC Methods.</li>
-              <li>What is Agile Methodology?</li>
-              <li>What is SCRUM Methodology?</li>
-              <li>What is DevOps?</li>
-              <li>Need for DevOps Culture.</li>
-              <li>What is a Continuous Integration?</li>
-              <li>What is Continuous Delivery?</li>
-              <li>Benefits Of DevOps</li>
-              <li>Introduction to Virtualization</li>
-              <li>VM - Manual setup</li>
-              <li>VM - Automated setup</li>
+              <li>Business Hours</li>
+              <li>Holidays</li>
+              <li>Language Settings</li>
+              <li>Manage Currencies</li>
             </ul>
           </div>
         )}
-        {showContent.showing == "fileServer" && (
+        {showContent.showing == "dataModel" && (
           <div className="w-[90%] md:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[620px]">
-            <h1 className="text-2xl font-bold mb-5">File servers</h1>
+            <h1 className="text-2xl font-bold mb-5">Salesforce Data Model</h1>
             <p>
               A file server is a centralized computer system that provides
               storage and access to files, allowing users on a network to share
@@ -195,21 +199,17 @@ const SalesForce = () => {
             </p>
             <p className="font-bold mt-5">Topics Covered</p>
             <ul className="mb-5 list-disc list-inside">
-              <li>Introduction to Linux</li>
-              <li>Basic Commands</li>
-              <li>More Commands (mkdir, cp, mv, touch, etc)</li>
-              <li>Filters & Redirections</li>
-              <li>Users and Group</li>
-              <li>File permissions</li>
-              <li>Process</li>
-              <li>Archiving</li>
-              <li>Ubuntu Based Commands</li>
+              <li>Standard vs Custom objects</li>
+              <li>Different Approaches of custom objects creation</li>
+              <li>Different types of Fields\Data Types</li>
+              <li>Different Relationships</li>
+              <li>What is Field Dependency</li>
             </ul>
           </div>
         )}
-        {showContent.showing == "bash" && (
+        {showContent.showing == "user" && (
           <div className="w-[90%] md:w-[45%] m-auto bg-slate-100/60 px-20 py-10 mb-20 md:h-[620px]">
-            <h1 className="text-2xl font-bold mb-5">Bash Scripting</h1>
+            <h1 className="text-2xl font-bold mb-5">User Management</h1>
             <p>
               Bash scripting involves writing and executing commands in the Bash
               shell to automate tasks and streamline repetitive processes on
@@ -217,22 +217,15 @@ const SalesForce = () => {
             </p>
             <p className="font-bold mt-5">Topics Covered</p>
             <ul className="mb-5 list-disc list-inside">
-              <li>Introduction to Linux</li>
-              <li>Basic Commands</li>
-              <li>More Commands (mkdir, cp, mv, touch, etc)</li>
-              <li>Filters & Redirections</li>
-              <li>Users and Group</li>
-              <li>File permissions</li>
-              <li>Process</li>
+              <li>Users</li>
+              <li>Profiles</li>
+              <li>Roles</li>
+              <li>Public Groups</li>
+              <li>Queues</li>
+              <li>Login Access Polices</li>
+              <li>Password Policies</li>
               <li>Archiving</li>
-              <li>Ubuntu Based Commands</li>
-              <li>Vagrant IP, RAM & CPU</li>
-              <li>Website Setup</li>
-              <li>Website Setup, WordPress</li>
-              <li>Automate Website setup</li>
-              <li>Introduction to networking and OSI models</li>
-              <li>Understanding the networking, IP</li>
-              <li>Networking Commands</li>
+              <li>Session Management, Settings</li>
             </ul>
           </div>
         )}
