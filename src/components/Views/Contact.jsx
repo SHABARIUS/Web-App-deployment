@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Contact = () => {
   const [firstName, setFirstName] = useState('')
@@ -9,45 +9,51 @@ const Contact = () => {
   const [mobile, setMobile] = useState('')
 
   const notify = (status) => {
-    status === 'pass' ? toast.success("Form Submitted Successfully!!!") : toast.error("Unable to submit form!");
+    status === 'pass'
+      ? toast.success('Form Submitted Successfully!!!')
+      : toast.error('Unable to submit form!')
   }
-  
+
   const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+    event.preventDefault()
+    const formData = new FormData(event.target)
     console.log(formData)
-    formData.append("access_key", "96bd1249-acaf-4e98-b98c-aa8920adc238");
+    formData.append('access_key', '96bd1249-acaf-4e98-b98c-aa8920adc238')
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    const object = Object.fromEntries(formData)
+    const json = JSON.stringify(object)
 
-    console.log(json);
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
+    console.log(json)
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
       },
       body: json
-    }).then((res) => res.json());
-   
+    }).then((res) => res.json())
+
     if (res.success) {
-      console.log("Success", res);
-      notify('pass');
+      console.log('Success', res)
+      notify('pass')
       setFirstName('')
       setLastName('')
       setEmail('')
       setMobile('')
-    }else{
-      notify('fail');
+    } else {
+      notify('fail')
     }
-
-  };
+  }
 
   return (
     <div className='w-[96%] m-auto mb-20' id='formSubmit'>
-      <h2 className='text-6xl font-bold my-10 text-center'>Talk to our experts!</h2>
-      <div className='sm:w-[360px] md:w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50 flex justify-center' id="contactForm">
+      <h2 className='text-6xl font-bold my-10 text-center'>
+        Talk to our experts!
+      </h2>
+      <div
+        className='sm:w-[360px] md:w-[760px] m-auto bg-[#0C3948] p-10 rounded-md text-gray-50 flex justify-center'
+        id='contactForm'
+      >
         <form
           // action='https://formsubmit.co/iampraveen7@gmail.com'
           onSubmit={onSubmit}
@@ -66,7 +72,7 @@ const Contact = () => {
               onChange={(e) => setFirstName(e.target.value)}
               className='ml-3 p-3 border border-black border-solid  mr-5 text-gray-950 rounded-md outline-none'
             />
-          </div> 
+          </div>
           <br />
           <div>
             <label htmlFor='LastName' className='inline-block w-24'>
@@ -110,23 +116,10 @@ const Contact = () => {
             />
           </div>
           <br />
-          {/* <div>
-            <label htmlFor='Course' className='inline-block w-24'>
-              Course
-            </label>
-            <select
-              name='course'
-              id='course'
-              className='mx-3 p-3 border border-black border-solid text-gray-950 rounded-md outline-none'
-            >
-              <option value='devops'>Devops</option>
-              <option value='mern'>MERN</option>
-              <option value='data science'>Data Science</option>
-              <option value='salesforce admin'>Salesforce admin</option>
-            </select>
-          </div> */}
           <div>
-            <label htmlFor="" className='inline-block w-24'>Qualification</label>
+            <label htmlFor='' className='inline-block w-24'>
+              Qualification
+            </label>
             <select
               name='education'
               id='education'
@@ -141,17 +134,25 @@ const Contact = () => {
           </div>
           <div className='mt-4 flex'>
             <div>
-              <label htmlFor="" name="current status">Current</label>
+              <label htmlFor='' name='current status'>
+                Current
+              </label>
             </div>
             <div className='ml-14'>
-              <input type="radio" value="student" name="current"/>
-              <label htmlFor="" className='mx-2' name="current">Student</label>
+              <input type='radio' value='student' name='current' />
+              <label htmlFor='' className='mx-2' name='current'>
+                Student
+              </label>
               <br />
-              <input type="radio" value="working" name="current"/>
-              <label htmlFor="" className='mx-2' name="current">Working Professional</label>
+              <input type='radio' value='working' name='current' />
+              <label htmlFor='' className='mx-2' name='current'>
+                Working Professional
+              </label>
               <br />
-              <input type="radio" value="others" name="current"/>
-              <label htmlFor="" className='mx-2' name="current">Others</label>
+              <input type='radio' value='others' name='current' />
+              <label htmlFor='' className='mx-2' name='current'>
+                Others
+              </label>
             </div>
           </div>
           <div className='my-10 m-auto w-80'>

@@ -5,13 +5,11 @@ import Header from '../Views/Header'
 const ContactPage = () => {
   return (
     <>
-    <div className='h-[91.25vh]'>
-        <Header />
-        <div className='mb-20'>
+      <Header />
+      <div className='mb-20'>
         <Contact />
-        </div>
-    </div>
-        <FootBar />
+      </div>
+      <FootBar />
     </>
   )
 }
